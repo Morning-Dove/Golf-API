@@ -1,9 +1,12 @@
-import uuid
+from uuid import UUID
 
 from pydantic import BaseModel
 
 
 class Player(BaseModel):
-    id: uuid.UUID
+    id: UUID
     name:str
-    handicapp: float
+    handicap: float
+
+class PlayerResponse(BaseModel):
+    id: UUID
